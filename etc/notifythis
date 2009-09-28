@@ -1,0 +1,9 @@
+# time in second between two checks, default is 1 minute if removed
+DELTA_BETWEEN_CHECK=20
+# time in minutes beteen two xml file reloading, default is 30 minutes
+DELTA_BETWEEN_XML_RELOAD=1
+
+# xml files (separated by ';') by order of preferences.
+# It can an absolute or a relative path to this file.
+# It can be a network path (http://) too
+XML_FILES=../data/test.xml

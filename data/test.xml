@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notifythis xmlns='http://launchpad.net/notify-this' xml:lang='fr'>
+    <notiftypes>
+        <type>
+            <name>lesson</name>
+            <priority>low</priority>
+            <icon>/usr/share/icons/Humanity/apps/22/gnome-terminal.svg</icon>
+        </type>
+        <type>
+            <name>conference</name>
+            <priority>low</priority>
+            <icon>/usr/share/icons/Humanity/stock/22/stock_people.svg</icon>
+        </type>
+        <type>
+            <name>demos</name>
+            <priority>low</priority>
+            <icon>/usr/share/icons/Humanity/places/22/user-desktop.svg</icon>
+        </type>
+        <type>
+            <name>miscellaneous</name>
+            <priority>low</priority>
+            <icon>/usr/share/icons/Humanity/places/22/start-here.png</icon>
+        </type>
+    </notiftypes>
+    <notifevents>
+        <event>
+            <title>Beginners lesson</title>
+            <content>Lesson for beginners in 10 min</content>
+            <type>lesson</type>
+            <time>2009-09-27 12:33</time>
+        </event>
+        <event>
+            <title>Advanced lessonUbuntu avancé</title>
+            <content>Advanced lesson starting in 15 min</content>
+            <type>lesson</type>
+            <time>2009-09-26 22:01</time>
+        </event>    
+        <event>
+            <title>Awesome conference</title>
+            <content>An awesome conference on Ubuntu will start in 5 min.\nKeep it hot!</content>
+            <type>conference</type>
+            <time>2009-09-27 23:54</time>
+        </event>
+        <event>
+            <title>End of the event</title>
+            <content>Well… I guess you will have to leave NOW!</content>
+            <type>miscellaneous</type>
+            <icon>/usr/share/icons/Humanity/status/22/stock_dialog-warning.svg</icon>
+            <time>2009-09-27 23:55</time>
+        </event>
+    </notifevents>
+</notifythis>
