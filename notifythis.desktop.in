@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Notifythis
-Comment=Notifythis application
-Categories=GNOME;Utility;
-Exec=notifythis
-Icon=notifythis
-Terminal=false
-Type=Application

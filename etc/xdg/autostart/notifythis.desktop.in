@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Notifythis
+Comment=Provides notifications related to notifications
+Exec=notifythis
+Icon=notifythis
+Terminal=false
+Type=Application
+Categories=
+X-Ubuntu-Gettext-Domain=notifythis

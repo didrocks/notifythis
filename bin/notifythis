@@ -73,7 +73,7 @@ if __name__ == '__main__':
     if options.no_daemon:
         main(config_file)
     else:
-        daemon = MyDaemon(config_file, '/tmp/daemon-example.pid')
+        daemon = MyDaemon(config_file, '/tmp/notifythis.pid')
         
         if 'stop' in args:
             daemon.stop()
