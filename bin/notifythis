@@ -22,7 +22,7 @@ import time
 import sys
 
 # Check if we are working in the source tree or from an installed 
-# vers_çh and mangle the python path accordingly
+# version and mangle the python path accordingly
 parent_module_path  = os.path.abspath(os.path.dirname(sys.argv[0]) + '/..')
 sys.path.insert(0, parent_module_path)
 

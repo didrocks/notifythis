@@ -1,3 +1,5 @@
 TODO: override to use dbus for pid file ?
 TODO: reload by dbus
 TODO: set logging INFO to stdout and other to stderr
+TODO: removing regularly cached file (and option to purge)
+TODO: cache file in /var, how?

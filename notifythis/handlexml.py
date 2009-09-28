@@ -26,7 +26,7 @@ from . import eventtype
 from . import event
 
 #var_directory = '/var/cache/notifythis'
-var_directory = '/tmp'
+var_directory = '/tmp/notifythis'
 
 class IconDict(dict):
     '''icon dictionnary to handle http cache'''
@@ -52,7 +52,7 @@ class IconDict(dict):
             except IOError, error:
                 # try to guess if we have an old copy:
                 if os.path.exists(dest_name):
-                    logging.warning("Can't download from %s but an old cached version has been found, take this one." % key)
+                    logging.warning("Can't download from %s but an old cached version has been found, take it." % key)
                     destvalue = dest_name
                 else:
                     logging.warning("Can't download from %s and no cached version found." % key)
@@ -60,7 +60,7 @@ class IconDict(dict):
             else: # all went well    
                 if not os.path.exists(var_directory):
                     logging.debug('Trying to creating %s directory' % var_directory)
-                    os.makedir(var_directory)
+                    os.makedirs(var_directory)
                 logging.debug('Caching "%s" to "%s"' % (key, dest_name))
                 with open(dest_name,'wb') as dest_file:
                     dest_file.write(local_image.read())
