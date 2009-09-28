@@ -1,0 +1,3 @@
+TODO: override to use dbus for pid file ?
+TODO: reload by dbus
+TODO: set logging INFO to stdout and other to stderr

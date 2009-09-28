@@ -82,7 +82,4 @@ if __name__ == '__main__':
         else:
             daemon.start()
 
-    #TODO: override to use dbus for pid file ?
-    #TODO: reload by dbus
-    #TODO: set logging INFO to stdout and other to stderr
 
