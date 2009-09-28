@@ -30,7 +30,7 @@ class Notifier():
             
         self.time_for_next_xml_load = datetime.datetime.now() + self.delta_between_xml_reload
         logging.debug("Init notification system")
-        if not pynotify.init("Notify-This"):
+        if not pynotify.init("NotifyThis"):
             logging.debug("Init notification system")
             sys.exit(1)
         # try to load events from XML files, in right order

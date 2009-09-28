@@ -13,7 +13,7 @@ import xml.etree.ElementTree as etree
 from . import eventtype
 from . import event
 
-#var_directory = '/var/cache/notify-this'
+#var_directory = '/var/cache/notifythis'
 var_directory = '/tmp'
 
 class IconDict(dict):
@@ -54,7 +54,7 @@ class IconDict(dict):
 def loadXML(xml_url):
     '''load XML file, locally or on the web (http://)'''
     
-    xml_namespace = '{http://launchpad.net/notify-this}'    
+    xml_namespace = '{http://launchpad.net/notifythis}'
     types = {}
     events = []
     # deal with cache and avoid checking multiple times same file
