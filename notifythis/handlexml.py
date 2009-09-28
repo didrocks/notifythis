@@ -7,6 +7,7 @@
 import datetime
 import logging
 import os
+import socket
 import urllib
 import xml.etree.ElementTree as etree
 
@@ -24,31 +25,43 @@ class IconDict(dict):
 
     def __getitem__(self, key): return self.data[key]
 
-    def __setitem__(self, key, value):
+    def __setitem__(self, key, destvalue):
         '''cache webfile if reachable and set value to real file value'''
       
         if key in self.data: # if already cached
             logging.debug('Icon "%s" already cached' % key)
             return
-        
-        logging.debug('Caching "%s" icon' % key)
+
+        logging.debug('Registering "%s" icon' % key)        
         # cache this file if accessed by http://
-        if value.startswith("http://"):
-            local_image = urllib.urlopen(key)
-            dest_name = var_directory + os.path.basename(key)
-            if not os.path.exists(var_directory):
-                logging.warning('Trying to creating %s directory' % var_directory)
-                os.makedir(var_directory)
-            logging.debug('Downloading "%s" to "%s"' % (key, dest_name))
-            with open(dest_name,'wb') as dest_file:
-                dest_file.write(local_image.read())
-            self.data[key] = dest_name
+        if key.startswith("http://"):
+            dest_name = var_directory + '/' + key.replace('/', "")
+            try:
+                local_image = urllib.urlopen(key)
+            except IOError, error:
+                # try to guess if we have an old copy:
+                if os.path.exists(dest_name):
+                    logging.warning("Can't download from %s but an old cached version has been found, take this one." % key)
+                    destvalue = dest_name
+                else:
+                    logging.warning("Can't download from %s and no cached version found." % key)
+                    destvalue = None
+            else: # all went well    
+                if not os.path.exists(var_directory):
+                    logging.debug('Trying to creating %s directory' % var_directory)
+                    os.makedir(var_directory)
+                logging.debug('Caching "%s" to "%s"' % (key, dest_name))
+                with open(dest_name,'wb') as dest_file:
+                    dest_file.write(local_image.read())
+            finally:
+                self.data[key] = dest_name
         else:
             if not os.path.exists(key):
-                logging.warning('%s icon file does not exist, notification will be shown without any image' % key)
-                self.data[key] = None
-            else:
-                self.data[key] = value
+                logging.warning('%s icon file does not exist.' % key)
+                destvalue = None
+        if not destvalue:
+            logging.warning("Notification will be shown without any image or with type event if it's a redefinition.")
+        self.data[key] = destvalue
 
 
 def loadXML(xml_url):

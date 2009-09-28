@@ -19,7 +19,7 @@
         <type>
             <name>miscellaneous</name>
             <priority>low</priority>
-            <icon>/usr/share/icons/Humanity/places/22/start-here.png</icon>
+            <icon>/usr/share/icons/Humanity/places/22/start-here.svg</icon>
         </type>
     </notiftypes>
     <notifevents>
@@ -30,9 +30,10 @@
             <time>2009-09-27 12:33</time>
         </event>
         <event>
-            <title>Advanced lessonUbuntu avancé</title>
+            <title>Advanced lesson</title>
             <content>Advanced lesson starting in 15 min</content>
             <type>lesson</type>
+            <icon>http://unexistingurl/stock_dialog-warning.svg</icon>
             <time>2009-09-26 22:01</time>
         </event>    
         <event>
