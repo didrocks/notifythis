@@ -21,6 +21,7 @@ import os
 import time
 import sys
 
+
 # Check if we are working in the source tree or from an installed 
 # version and mangle the python path accordingly
 parent_module_path  = os.path.abspath(os.path.dirname(sys.argv[0]) + '/..')
@@ -35,10 +36,21 @@ LEVELS = (  logging.ERROR,
             logging.DEBUG,
             )
 
+log_daemon_file = "~/.local/share/notifythis/notifythis.log"
+
 class MyDaemon(Daemon):
     
-    def __init__(self, config_file, pidfile):
-        Daemon.__init__(self, pidfile, stdout='/tmp/log', stderr='/tmp/logerr')
+    def __init__(self, config_file, log_daemon_file, pidfile):
+        log_daemon_file = os.path.expanduser(log_daemon_file)
+        try:
+            if not os.path.exists(os.path.dirname(log_daemon_file)):
+                os.makedirs(os.path.dirname(log_daemon_file))
+            # make a first right to ensure we have the permission
+            open(log_daemon_file, 'w').write("Starting daemon\n")
+        except OSError, error:
+            logging.error("Can't write in %s: %s" % (os.path.dirname(log_daemon_file), error))
+            sys.exit(1)
+        Daemon.__init__(self, pidfile, stderr=log_daemon_file)
         self.config_file = config_file
 
     def run(self):
@@ -48,8 +60,8 @@ def main(config_file):
 
     notifier = checknotif.Notifier(config_file)
     while True:
-        notifier.check_notif()
         notifier.updatexml()
+        notifier.check_notif()
         time.sleep(notifier.delta_between_check)
         continue
 	
@@ -65,7 +77,7 @@ if __name__ == '__main__':
     parser.add_option('-c', '', dest='config_file', action='store',
         help='Override the default configuration file from "/etc/notifythis" to CONFIG_FILE')
     parser.add_option('-d', '--debug', dest='debug_mode', action='store_true',
-        help='Print the maximum debugging info (implies -vvv)')
+        help='Print the maximum debugging info (implies -vv)')
     parser.add_option('-v', '--verbose', dest='logging_level', action='count',
         help='set error_level output to warning, info, and then debug')
     parser.set_defaults(logging_level=0, no_daemon=False, config_file=None, debug_mode=False)
@@ -73,18 +85,20 @@ if __name__ == '__main__':
     
     if options.debug_mode:
         options.logging_level = 3
+    elif not options.no_daemon:
+        options.logging_level = 2
     logging.basicConfig(level=LEVELS[options.logging_level], format='%(asctime)s %(levelname)s %(message)s')
 
     # try to mangle config file path (if not specified, try related to parent_module_path/etc/notifythis):
     if not options.config_file:
-	config_file = parent_module_path + '/etc/notifythis'
+        config_file = parent_module_path + '/etc/notifythis'
     else:
         config_file = options.config_file
 
     if options.no_daemon:
         main(config_file)
     else:
-        daemon = MyDaemon(config_file, '/tmp/notifythis.pid')
+        daemon = MyDaemon(config_file, log_daemon_file, '/tmp/notifythis.pid')
         
         if 'stop' in args:
             daemon.stop()
@@ -92,5 +106,3 @@ if __name__ == '__main__':
             daemon.restart()
         else:
             daemon.start()
-
-
