@@ -23,7 +23,6 @@ import os
 import pynotify
 import sys
 
-DEFAULT_DELTA_BETWEEN_CHECK = 60
 DEFAULT_DELTA_BETWEEN_XML_RELOAD = 30
 
 
@@ -33,8 +32,6 @@ class Notifier():
         '''init notification system'''
         
         self.events = []
-        self.delta_between_check = DEFAULT_DELTA_BETWEEN_CHECK
-        logging.debug(self.delta_between_check)
         self.delta_between_xml_reload = DEFAULT_DELTA_BETWEEN_XML_RELOAD
         try:
             self.update_from_config_file(config_file)
@@ -80,9 +77,7 @@ class Notifier():
                 # normally, we have two fields in "fields"
                 if len(fields) == 2:
                     entry = fields[0].strip()
-                    if entry == 'DELTA_BETWEEN_CHECK':
-                        self.delta_between_check = int(fields[1].strip())
-                    elif entry == 'DELTA_BETWEEN_XML_RELOAD':
+                    if entry == 'DELTA_BETWEEN_XML_RELOAD':
                         self.delta_between_xml_reload = datetime.timedelta(minutes=int(fields[1].strip()))
                     elif entry == 'XML_FILES':
                         self.xml_files = []
@@ -98,8 +93,7 @@ class Notifier():
         '''check if there is an event to notify'''
 
         now = datetime.datetime.now()
-        last_check_time = now - datetime.timedelta(seconds=self.delta_between_check)
-        logging.info("New check, time: %s" % now.strftime('%Y-%m-%d %H:%M:%S'))   
+        last_check_time = now - datetime.timedelta(seconds=1)
         for event in self.events:
             # min limit to not show all old notification at startup
             if (last_check_time < event.time <= now) and not event.notified:
@@ -118,7 +112,11 @@ class Notifier():
                     logging.error("Failed to send notification")
                 # for limite case, mark item as shown (not display two times)
                 event.notified = True
-                
+
+    def ping(self):
+        '''Show ping in log'''
+        logging.info("CheckNotify daemon ping")   
+        
     def updatexml(self):
         '''load from XML file'''
     

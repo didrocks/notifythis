@@ -26,6 +26,7 @@ import sys
 parent_module_path  = os.path.abspath(os.path.dirname(sys.argv[0]) + '/..')
 sys.path.insert(0, parent_module_path)
 
+from notifythis import checknotif
 from notifythis.desktopdaemon import DestkopDaemon
 
 LEVELS = (  logging.ERROR,
@@ -37,15 +38,12 @@ LEVELS = (  logging.ERROR,
 log_daemon_file = "~/.local/share/notifythis/notifythis.log"
 
 
-
-
 def main_no_daemon(config_file):
     '''main loop when no-daemon is activated'''
     
     notifier = checknotif.Notifier(config_file)
     while True:
         notifier.check()
-        time.sleep(notifier.delta_between_check)
         continue
 	
 	sys.exit(0)
@@ -53,7 +51,7 @@ def main_no_daemon(config_file):
 
 if __name__ == '__main__':
     
-    usage = "usage: %prog [options] [stop|restart]"
+    usage = "usage: %prog [options] [stop|reload]"
     parser = OptionParser(prog='notifythis', usage=usage)
     parser.add_option('', '--no-daemon', dest='no_daemon', action='store_true',
         help='Don\'t become a daemon')
