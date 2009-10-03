@@ -33,6 +33,9 @@ class Notifier():
         '''init notification system'''
         
         self.events = []
+        self.delta_between_check = DEFAULT_DELTA_BETWEEN_CHECK
+        logging.debug(self.delta_between_check)
+        self.delta_between_xml_reload = DEFAULT_DELTA_BETWEEN_XML_RELOAD
         try:
             self.update_from_config_file(config_file)
         except IOError, error:
@@ -60,12 +63,8 @@ class Notifier():
             logging.error("No good XML file found")
             sys.exit(1)
 
-
     def update_from_config_file(self, config_path_file):
         '''enable opening xml file'''
-
-        self.delta_between_check = DEFAULT_DELTA_BETWEEN_CHECK
-        self.delta_between_xml_reload = DEFAULT_DELTA_BETWEEN_XML_RELOAD
         
         # take specified config file, otherwise the one related to library
         # and finally, default to /etc/notifythis
@@ -142,3 +141,9 @@ class Notifier():
             if not self.events:
                 logging.error("No good XML file found. Keep old one")
 
+    def check(self):
+        '''update xml file and events at each interval'''
+        
+        self.updatexml()
+        self.check_notif()
+        return True # so that timeout-add continue to launch this function
