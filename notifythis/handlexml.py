@@ -21,6 +21,9 @@ import os
 import socket
 import urllib
 import xml.etree.ElementTree as etree
+import gettext
+from gettext import gettext as _
+
 
 from notifythis import eventtype
 from notifythis import event
@@ -40,10 +43,10 @@ class IconDict(dict):
         '''cache webfile if reachable and set value to real file value'''
       
         if key in self.data: # if already cached
-            logging.debug('Icon "%s" already cached' % key)
+            logging.debug(_('Icon "%s" already cached' % key))
             return
 
-        logging.debug('Registering "%s" icon' % key)        
+        logging.debug(_('Registering "%s" icon') % key)        
         # cache this file if accessed by http://
         if key.startswith("http://"):
             dest_name = var_directory + '/' + key.replace('/', "")
@@ -52,26 +55,26 @@ class IconDict(dict):
             except IOError, error:
                 # try to guess if we have an old copy:
                 if os.path.exists(dest_name):
-                    logging.warning("Can't download from %s but an old cached version has been found, take it." % key)
+                    logging.warning(_("Can't download from %s but an old cached version has been found, take it.") % key)
                     destvalue = dest_name
                 else:
-                    logging.warning("Can't download from %s and no cached version found." % key)
+                    logging.warning(_("Can't download from %s and no cached version found.") % key)
                     destvalue = None
             else: # all went well    
                 if not os.path.exists(var_directory):
-                    logging.debug('Trying to creating %s directory' % var_directory)
+                    logging.debug(_('Trying to creating %s directory') % var_directory)
                     os.makedirs(var_directory)
-                logging.debug('Caching "%s" to "%s"' % (key, dest_name))
+                logging.debug(_('Caching "%s" to "%s"') % (key, dest_name))
                 with open(dest_name,'wb') as dest_file:
                     dest_file.write(local_image.read())
             finally:
                 self.data[key] = dest_name
         else:
             if not os.path.exists(key):
-                logging.warning('%s icon file does not exist.' % key)
+                logging.warning(_('%s icon file does not exist.') % key)
                 destvalue = None
         if not destvalue:
-            logging.warning("Notification will be shown without any image or with type event if it's a redefinition.")
+            logging.warning(_("Notification will be shown without any image or with type event if it's a redefinition."))
         self.data[key] = destvalue
 
 
@@ -94,7 +97,7 @@ def loadXML(xml_url):
     xml_tree = etree.parse(xml_file)
     xml_file.close()
     root = xml_tree.getroot()
-    logging.debug("load event types")
+    logging.debug(_('load event types'))
     notiftype = root.find(xml_namespace + 'notiftypes')
     for xml_elem in notiftype.findall(xml_namespace + 'type'):
         name = xml_elem.find(xml_namespace + 'name').text
@@ -105,10 +108,10 @@ def loadXML(xml_url):
             icon = xml_elem.find(xml_namespace + 'icon').text
             icons[icon] = icon # cache icon and return new one if needed
             icon = icons[icon]
-        logging.debug("Creating new event type: %s, %s, %s" % (name, priority, icon))
+        logging.debug(_('Creating new event type: %s, %s, %s') % (name, priority, icon))
         types[name] = eventtype.EventType(name, priority, icon)
         
-    logging.debug("load events")
+    logging.debug(_('load events'))
     notifevents = root.find(xml_namespace + 'notifevents')
     for xml_elem in notifevents.findall(xml_namespace + 'event'):
         title = xml_elem.find(xml_namespace + 'title').text
@@ -116,7 +119,7 @@ def loadXML(xml_url):
         timeevent = datetime.datetime.strptime(xml_elem.find(xml_namespace + 'time').text, '%Y-%m-%d %H:%M')
         type_name = xml_elem.find(xml_namespace + 'type').text
         if not type_name in types:
-            raise ValueError("Type '%s' in '%s' event does not exists" % (type_name, title))
+            raise ValueError(_("Type '%s' in '%s' event does not exists") % (type_name, title))
         # optional values
         priority = None
         if xml_elem.find(xml_namespace + 'priority') is not None:
@@ -126,7 +129,7 @@ def loadXML(xml_url):
             icon = xml_elem.find(xml_namespace + 'icon').text
             icons[icon] = icon # cache icon and return new one if needed
             icon = icons[icon]
-        logging.debug("Creating new event: %s, %s, %s, %s, %s, %s" % (title, content, timeevent, types[type_name], priority, icon))
+        logging.debug(_('Creating new event: %s, %s, %s, %s, %s, %s') % (title, content, timeevent, types[type_name], priority, icon))
         events.append(event.Event(title, content, timeevent, types[type_name], priority, icon))
 
     return events

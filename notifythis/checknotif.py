@@ -22,6 +22,8 @@ import logging
 import os
 import pynotify
 import sys
+import gettext
+from gettext import gettext as _
 
 DEFAULT_DELTA_BETWEEN_XML_RELOAD = 30
 
@@ -36,13 +38,13 @@ class Notifier():
         try:
             self.update_from_config_file(config_file)
         except IOError, error:
-            logging.error("Can't load configuration file: %s" % error)
+            logging.error(_("Can't load configuration file: %s") % error)
             sys.exit(1)
             
         self.time_for_next_xml_load = datetime.datetime.now() + self.delta_between_xml_reload
-        logging.debug("Init notification system")
+        logging.debug(_('Init notification system'))
         if not pynotify.init("NotifyThis"):
-            logging.debug("Init notification system")
+            logging.debug(_('Init notification system'))
             sys.exit(1)
         # try to load events from XML files, in right order
         for xml_file in self.xml_files:
@@ -50,14 +52,14 @@ class Notifier():
             try:
                 self.events = handlexml.loadXML(xml_file)
             except IOError, error:
-                logging.warning("XMl file seems being no more accessible: %s" % error)
+                logging.warning(_('XMl file seems being no more accessible: %s') % error)
             else:
                 if not self.events:
-                    logging.warning("Can't perform initial loading of empty %s file: no event found" % xml_file)
+                    logging.warning(_("Can't perform initial loading of empty %s file: no event found") % xml_file)
                 else:
                     break
         if not self.events:
-            logging.error("No good XML file found")
+            logging.error(_('No good XML file found')
             sys.exit(1)
 
     def update_from_config_file(self, config_path_file):
@@ -68,7 +70,7 @@ class Notifier():
         if not config_path_file:
             config_path_file = '/etc/notifythis'
         config_path_file = os.path.abspath(config_path_file)
-        logging.info("Loading configuration from %s" % config_path_file)
+        logging.info(_('Loading configuration from %s') % config_path_file)
         
         with open(config_path_file, 'r') as config_file:
             for line in config_file:
@@ -97,7 +99,7 @@ class Notifier():
         for event in self.events:
             # min limit to not show all old notification at startup
             if (last_check_time < event.time <= now) and not event.notified:
-                logging.info("Event %s found, initially scheduled at: %s" % (event.title, event.time.strftime('%Y-%m-%d %H:%M:%S')))
+                logging.info(_('Event %s found, initially scheduled at: %s') % (event.title, event.time.strftime('%Y-%m-%d %H:%M:%S')))
                 image_path = ""
                 if event.icon: image_path = "file://" + event.icon
                 notif = pynotify.Notification(event.title, event.content, image_path)
@@ -109,13 +111,13 @@ class Notifier():
                     urgency = pynotify.URGENCY_LOW
                 notif.set_urgency(urgency)
                 if not notif.show():
-                    logging.error("Failed to send notification")
+                    logging.error(_('Failed to send notification'))
                 # for limite case, mark item as shown (not display two times)
                 event.notified = True
 
     def ping(self):
         '''Show ping in log'''
-        logging.info("CheckNotify daemon ping")   
+        logging.info(_('CheckNotify daemon ping'))   
         
     def updatexml(self):
         '''load from XML file'''
@@ -124,20 +126,20 @@ class Notifier():
         now = datetime.datetime.now()
         if self.time_for_next_xml_load < now:
             for xml_file in self.xml_files:
-                logging.info("Reloading %s XML input file" % xml_file)
+                logging.info(_('Reloading %s XML input file') % xml_file)
                 try:
                     new_events = handlexml.loadXML(xml_file)
                 except IOError, error:
-                    logging.warning("XMl file seems being no more accessible: %s" % error)
+                    logging.warning(_('XMl file seems being no more accessible: %s') % error)
                 else:
                     if not new_events:
-                        logging.warning("Can't perform initial loading of empty %s file: no event found" % xml_file)
+                        logging.warning(_("Can't perform initial loading of empty %s file: no event found") % xml_file)
                     else:
                         self.events = new_events
                         self.time_for_next_xml_load = now + self.delta_between_xml_reload
                         break
             if not self.events:
-                logging.error("No good XML file found. Keep old one")
+                logging.error(_('No good XML file found. Keep old one.'))
 
     def check(self):
         '''update xml file and events at each interval'''

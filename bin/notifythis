@@ -20,6 +20,9 @@ from optparse import OptionParser
 import os
 import time
 import sys
+import gettext
+from gettext import gettext as _
+
 
 # Check if we are working in the source tree or from an installed 
 # version and mangle the python path accordingly
@@ -51,16 +54,16 @@ def main_no_daemon(config_file):
 
 if __name__ == '__main__':
     
-    usage = "usage: %prog [options] [stop|reload]"
+    usage = _("usage: %prog [options] [stop|reload]")
     parser = OptionParser(prog='notifythis', usage=usage)
     parser.add_option('', '--no-daemon', dest='no_daemon', action='store_true',
-        help='Don\'t become a daemon')
+        help=_('Don\'t become a daemon'))
     parser.add_option('-c', '', dest='config_file', action='store',
-        help='Override the default configuration file from "/etc/notifythis" to CONFIG_FILE')
+        help=_('Override the default configuration file from "/etc/notifythis" to CONFIG_FILE'))
     parser.add_option('-d', '--debug', dest='debug_mode', action='store_true',
-        help='Print the maximum debugging info (implies -vv)')
+        help=_('Print the maximum debugging info (implies -vv)'))
     parser.add_option('-v', '--verbose', dest='logging_level', action='count',
-        help='set error_level output to warning, info, and then debug')
+        help=_('set error_level output to warning, info, and then debug'))
     parser.set_defaults(logging_level=0, no_daemon=False, config_file=None, debug_mode=False)
     options, args = parser.parse_args()
     

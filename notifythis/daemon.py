@@ -19,6 +19,8 @@
 
 import sys, os, time, atexit
 from signal import SIGTERM 
+import gettext
+from gettext import gettext as _
 
 class Daemon(object):
     """
@@ -44,7 +46,7 @@ class Daemon(object):
                 # exit first parent
                 sys.exit(0) 
         except OSError, e: 
-            sys.stderr.write("fork #1 failed: %d (%s)\n" % (e.errno, e.strerror))
+            sys.stderr.write(_('fork #1 failed: %d (%s)\n') % (e.errno, e.strerror))
             sys.exit(1)
     
         # decouple from parent environment
@@ -59,7 +61,7 @@ class Daemon(object):
                 # exit from second parent
                 sys.exit(0) 
         except OSError, e: 
-            sys.stderr.write("fork #2 failed: %d (%s)\n" % (e.errno, e.strerror))
+            sys.stderr.write(_('fork #2 failed: %d (%s)\n') % (e.errno, e.strerror))
             sys.exit(1) 
     
         # redirect standard file descriptors
@@ -96,7 +98,7 @@ class Daemon(object):
             pid = None
     
         if pid:
-            message = "pidfile %s already exist. Daemon already running?\n"
+            message = _('pidfile %s already exist. Daemon already running?\n')
             sys.stderr.write(message % self.pidfile)
             sys.exit(1)
         
@@ -118,7 +120,7 @@ class Daemon(object):
                 pid = None
         
             if not pid:
-                message = "pidfile %s does not exist. Daemon not running?\n"
+                message = _('pidfile %s does not exist. Daemon not running?\n')
                 sys.stderr.write(message % self.pidfile)
                 return # not an error in a restart
 

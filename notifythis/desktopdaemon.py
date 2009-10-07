@@ -22,6 +22,8 @@ import dbus.mainloop.glib
 import gobject
 import os
 import sys
+import gettext
+from gettext import gettext as _
 
 
 from notifythis import checknotif
@@ -37,13 +39,13 @@ class DbusHandler(dbus.service.Object):
     @dbus.service.method("net.launchpad.DaemonInterface",
                      in_signature='', out_signature='')
     def ReloadConfig(self):
-        logging.info("Receive reloading signal")
+        logging.info(_("Receive reloading signal"))
         self.daemon.updateconfig()
     
     @dbus.service.method("net.launchpad.DaemonInterface",
                      in_signature='', out_signature='')
     def Exit(self):
-        logging.info("Closing signal received")
+        logging.info(_("Closing signal received"))
         self.daemon.mainloop.quit()
 
 
@@ -57,9 +59,9 @@ class DestkopDaemon(Daemon):
             if not os.path.exists(os.path.dirname(log_daemon_file)):
                 os.makedirs(os.path.dirname(log_daemon_file))
             # make a first write to ensure we have the permission
-            open(log_daemon_file, 'a').write("Realizing new daemon operation.\n")
+            open(log_daemon_file, 'a').write(_("Realizing new daemon operation.\n"))
         except OSError, error:
-            logging.error("Can't write in %s: %s" % (os.path.dirname(log_daemon_file), error))
+            logging.error(_("Can't write in %s: %s") % (os.path.dirname(log_daemon_file), error))
             sys.exit(1)
         
         self.config_file = config_file
@@ -80,7 +82,7 @@ class DestkopDaemon(Daemon):
         except dbus.exceptions.DBusException:
             pass
         else:
-            logging.error("One daemon instance of notifythis is already launched. Exiting.")
+            logging.error(_("One daemon instance of notifythis is already launched. Exiting."))
             sys.exit(1)
         Daemon.start(self)
 
@@ -92,11 +94,11 @@ class DestkopDaemon(Daemon):
             daemonHandler = self.session_bus.get_object('net.launchpad.notifythis',
                                              '/DaemonHandler')
         except dbus.exceptions.DBusException:
-            logging.error("No notifythis daemon detected. Did you launch it interactively?") 
+            logging.error(_("No notifythis daemon detected. Did you launch it interactively?"))
             sys.exit(1)
         else:
             daemonHandler.Exit(dbus_interface='net.launchpad.DaemonInterface')
-            logging.info("Notifythis daemon ended")
+            logging.info(_("Notifythis daemon ended"))
         
     def reload(self):
         '''reload configuration and xml file in the daemon'''
@@ -105,11 +107,11 @@ class DestkopDaemon(Daemon):
             daemonHandler = self.session_bus.get_object('net.launchpad.notifythis',
                                              '/DaemonHandler')
         except dbus.exceptions.DBusException:
-            logging.error("No notifythis daemon detected. Did you launch it interactively?") 
+            logging.error(_("No notifythis daemon detected. Did you launch it interactively?")) 
             sys.exit(1)
         else:
             daemonHandler.ReloadConfig(dbus_interface='net.launchpad.DaemonInterface')
-            logging.info("Notifythis daemon reloaded")
+            logging.info(_("Notifythis daemon reloaded"))
 
     def updateconfig(self):
         '''update from config loading new /etc file'''
