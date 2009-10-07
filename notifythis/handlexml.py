@@ -22,8 +22,8 @@ import socket
 import urllib
 import xml.etree.ElementTree as etree
 
-from . import eventtype
-from . import event
+from notifythis import eventtype
+from notifythis import event
 
 #var_directory = '/var/cache/notifythis'
 var_directory = '/tmp/notifythis'

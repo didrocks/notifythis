@@ -15,7 +15,7 @@
 #with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
-from . import handlexml
+from notifythis import handlexml
 
 import datetime
 import logging

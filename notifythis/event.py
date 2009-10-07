@@ -15,7 +15,7 @@
 #with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
-from . import eventtype
+from notifythis import eventtype
 
 class Event:
     '''Event contain title, description, time and type
