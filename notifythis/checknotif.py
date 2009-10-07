@@ -59,7 +59,7 @@ class Notifier():
                 else:
                     break
         if not self.events:
-            logging.error(_('No good XML file found')
+            logging.error(_('No good XML file found'))
             sys.exit(1)
 
     def update_from_config_file(self, config_path_file):
