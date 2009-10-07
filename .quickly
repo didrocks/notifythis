@@ -1,3 +1,4 @@
 project = notifythis
 template = ubuntu-project
 format = 0.2.3
+lp_id = notifythis

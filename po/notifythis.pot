@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-10-07 19:12+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../bin/notifythis.py:57
+msgid "usage: %prog [options] [stop|reload]"
+msgstr ""
+
+#: ../bin/notifythis.py:60
+msgid "Don't become a daemon"
+msgstr ""
+
+#: ../bin/notifythis.py:62
+msgid ""
+"Override the default configuration file from \"/etc/notifythis\" to "
+"CONFIG_FILE"
+msgstr ""
+
+#: ../bin/notifythis.py:64
+msgid "Print the maximum debugging info (implies -vv)"
+msgstr ""
+
+#: ../bin/notifythis.py:66
+msgid "set error_level output to warning, info, and then debug"
+msgstr ""
+
+#: ../notifythis/desktopdaemon.py:42
+msgid "Receive reloading signal"
+msgstr ""
+
+#: ../notifythis/desktopdaemon.py:48
+msgid "Closing signal received"
+msgstr ""
+
+#. make a first write to ensure we have the permission
+#: ../notifythis/desktopdaemon.py:62
+msgid "Realizing new daemon operation.\n"
+msgstr ""
+
+#: ../notifythis/desktopdaemon.py:64
+#, python-format
+msgid "Can't write in %s: %s"
+msgstr ""
+
+#: ../notifythis/desktopdaemon.py:85
+msgid "One daemon instance of notifythis is already launched. Exiting."
+msgstr ""
+
+#: ../notifythis/desktopdaemon.py:97 ../notifythis/desktopdaemon.py:110
+msgid "No notifythis daemon detected. Did you launch it interactively?"
+msgstr ""
+
+#: ../notifythis/desktopdaemon.py:101
+msgid "Notifythis daemon ended"
+msgstr ""
+
+#: ../notifythis/desktopdaemon.py:114
+msgid "Notifythis daemon reloaded"
+msgstr ""
+
+#: ../notifythis/daemon.py:49
+#, python-format
+msgid "fork #1 failed: %d (%s)\n"
+msgstr ""
+
+#: ../notifythis/daemon.py:64
+#, python-format
+msgid "fork #2 failed: %d (%s)\n"
+msgstr ""
+
+#: ../notifythis/daemon.py:101
+#, python-format
+msgid "pidfile %s already exist. Daemon already running?\n"
+msgstr ""
+
+#: ../notifythis/daemon.py:123
+#, python-format
+msgid "pidfile %s does not exist. Daemon not running?\n"
+msgstr ""
+
+#. if already cached
+#: ../notifythis/handlexml.py:46
+#, python-format
+msgid "Icon \"%s\" already cached"
+msgstr ""
+
+#: ../notifythis/handlexml.py:49
+#, python-format
+msgid "Registering \"%s\" icon"
+msgstr ""
+
+#: ../notifythis/handlexml.py:58
+#, python-format
+msgid ""
+"Can't download from %s but an old cached version has been found, take it."
+msgstr ""
+
+#: ../notifythis/handlexml.py:61
+#, python-format
+msgid "Can't download from %s and no cached version found."
+msgstr ""
+
+#: ../notifythis/handlexml.py:65
+#, python-format
+msgid "Trying to creating %s directory"
+msgstr ""
+
+#: ../notifythis/handlexml.py:67
+#, python-format
+msgid "Caching \"%s\" to \"%s\""
+msgstr ""
+
+#: ../notifythis/handlexml.py:74
+#, python-format
+msgid "%s icon file does not exist."
+msgstr ""
+
+#: ../notifythis/handlexml.py:77
+msgid ""
+"Notification will be shown without any image or with type event if it's a "
+"redefinition."
+msgstr ""
+
+#: ../notifythis/handlexml.py:100
+msgid "load event types"
+msgstr ""
+
+#: ../notifythis/handlexml.py:111
+#, python-format
+msgid "Creating new event type: %s, %s, %s"
+msgstr ""
+
+#: ../notifythis/handlexml.py:114
+msgid "load events"
+msgstr ""
+
+#: ../notifythis/handlexml.py:122
+#, python-format
+msgid "Type '%s' in '%s' event does not exists"
+msgstr ""
+
+#: ../notifythis/handlexml.py:132
+#, python-format
+msgid "Creating new event: %s, %s, %s, %s, %s, %s"
+msgstr ""
+
+#: ../notifythis/checknotif.py:41
+#, python-format
+msgid "Can't load configuration file: %s"
+msgstr ""
+
+#: ../notifythis/checknotif.py:45 ../notifythis/checknotif.py:47
+msgid "Init notification system"
+msgstr ""
+
+#: ../notifythis/checknotif.py:55 ../notifythis/checknotif.py:133
+#, python-format
+msgid "XMl file seems being no more accessible: %s"
+msgstr ""
+
+#: ../notifythis/checknotif.py:58 ../notifythis/checknotif.py:136
+#, python-format
+msgid "Can't perform initial loading of empty %s file: no event found"
+msgstr ""
+
+#: ../notifythis/checknotif.py:62
+msgid "No good XML file found"
+msgstr ""
+
+#: ../notifythis/checknotif.py:73
+#, python-format
+msgid "Loading configuration from %s"
+msgstr ""
+
+#: ../notifythis/checknotif.py:102
+#, python-format
+msgid "Event %s found, initially scheduled at: %s"
+msgstr ""
+
+#: ../notifythis/checknotif.py:114
+msgid "Failed to send notification"
+msgstr ""
+
+#: ../notifythis/checknotif.py:120
+msgid "CheckNotify daemon ping"
+msgstr ""
+
+#: ../notifythis/checknotif.py:129
+#, python-format
+msgid "Reloading %s XML input file"
+msgstr ""
+
+#: ../notifythis/checknotif.py:142
+msgid "No good XML file found. Keep old one."
+msgstr ""
