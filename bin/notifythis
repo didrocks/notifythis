@@ -71,8 +71,10 @@ if __name__ == '__main__':
     logging.basicConfig(level=LEVELS[options.logging_level], format='%(asctime)s %(levelname)s %(message)s')
 
     # try to mangle config file path (if not specified, try related to parent_module_path/etc/notifythis):
+    config_file = None
     if not options.config_file:
-        config_file = parent_module_path + '/etc/notifythis'
+        if os.path.exists(parent_module_path + '/etc/notifythis'):
+            config_file = parent_module_path + '/etc/notifythis'
     else:
         config_file = options.config_file
 
