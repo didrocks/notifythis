@@ -25,7 +25,7 @@ except ImportError:
     sys.exit(1)
 
 assert DistUtilsExtra.auto.__version__ >= '2.10', 'needs DistUtilsExtra.auto >= 2.10'
-mport os
+import os
 
 
 def update_data_path(prefix, oldvalue=None):
@@ -50,8 +50,7 @@ def update_data_path(prefix, oldvalue=None):
         fin.close()
         os.rename(fout.name, fin.name)
     except (OSError, IOError), e:
-        print ("ERROR: Can't find notifythis/notifythisconfig.py")
-        sys.exit(1)
+        print ("WARNING: Can't find notifythis/notifythisconfig.py")
     return oldvalue
 
 
@@ -70,8 +69,7 @@ def update_desktop_file(datadir):
         fin.close()
         os.rename(fout.name, fin.name)
     except (OSError, IOError), e:
-        print ("ERROR: Can't find notifythis.desktop.in")
-        sys.exit(1)
+        print ("WARNING: Can't find notifythis.desktop.in")
 
 
 class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
