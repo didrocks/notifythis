@@ -33,7 +33,7 @@ DistUtilsExtra.auto.setup(
     license='GPL-3',
     author='Didier Roche',
     author_email='didrocks@ubuntu.com',
-    description='Easily notify information to user from data file …',
+    description='Easily notify information to user from data file…',
     long_description='NotifyThis is a daemon enabling notification from network or local xml files, showing icon, severity, caching data… The current use case is announcing conferences, lessons, as information during a party.',
     url='https://launchpad.net/notifythis',
     )

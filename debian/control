@@ -1,0 +1,25 @@
+Source: notifythis
+Section: python
+Priority: extra
+Build-Depends: cdbs (>= 0.4.43),
+ debhelper (>= 6),
+ python,
+ python-central (>= 0.6.11),
+ python-distutils-extra (>= 2.10)
+Maintainer: Didier Roche <didrocks@ubuntu.com>
+Standards-Version: 3.8.2
+XS-Python-Version: current
+
+Package: notifythis
+Architecture: all
+XB-Python-Version: ${python:Versions}
+Depends: ${misc:Depends},
+ ${python:Depends}${misc:Depends},
+ ${python:Depends},
+ python-gobject,
+ python-dbus,
+ python-notify
+Description: Easily notify information to user from data file…
+ NotifyThis is a daemon enabling notification from network or local xml
+ files, showing icon, severity, caching data… The current use case is
+ announcing conferences, lessons, as information during a party.
