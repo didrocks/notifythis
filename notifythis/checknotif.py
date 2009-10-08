@@ -117,7 +117,8 @@ class Notifier():
 
     def ping(self):
         '''Show ping in log'''
-        logging.info(_('CheckNotify daemon ping'))   
+        logging.info(_('CheckNotify daemon ping')) 
+        return True
         
     def updatexml(self):
         '''load from XML file'''
