@@ -26,7 +26,8 @@ import gettext
 from gettext import gettext as _
 
 DEFAULT_DELTA_BETWEEN_XML_RELOAD = 30
-
+CHECK_INTERVAL = 1
+PING_INTERVAL = 120
 
 class Notifier():
 
@@ -95,7 +96,7 @@ class Notifier():
         '''check if there is an event to notify'''
 
         now = datetime.datetime.now()
-        last_check_time = now - datetime.timedelta(seconds=1)
+        last_check_time = now - datetime.timedelta(seconds=CHECK_INTERVAL)
         for event in self.events:
             # min limit to not show all old notification at startup
             if (last_check_time < event.time <= now) and not event.notified:
@@ -117,7 +118,7 @@ class Notifier():
 
     def ping(self):
         '''Show ping in log'''
-        logging.info(_('CheckNotify daemon ping')) 
+        logging.info(_('CheckNotify daemon ping'))  
         return True
         
     def updatexml(self):

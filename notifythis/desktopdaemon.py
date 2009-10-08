@@ -116,7 +116,13 @@ class DestkopDaemon(Daemon):
     def updateconfig(self):
         '''update from config loading new /etc file'''
         self.notifier = checknotif.Notifier(self.config_file)
+    
+    def notifiercall(self, function):
+        '''metamethod use to call dynamically self.notifier
         
+        Otherwise, timeout_add_seconds will be bound to old notifier'''
+        return getattr(self.notifier, function)()
+    
     def run(self):
         '''initiate dbus, create notifier object et call main loop'''
  
@@ -128,7 +134,7 @@ class DestkopDaemon(Daemon):
         dbus_object = self.dbus_object
         # load configuration file, check every second and add a ping every 2 minutes
         self.updateconfig()
-        gobject.timeout_add_seconds(1, self.notifier.check)
-        gobject.timeout_add_seconds(120, self.notifier.ping)
+        gobject.timeout_add_seconds(checknotif.CHECK_INTERVAL, self.notifiercall, 'check')
+        gobject.timeout_add_seconds(checknotif.PING_INTERVAL, self.notifiercall, 'ping')
 
         self.mainloop.run()
