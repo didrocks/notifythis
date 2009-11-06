@@ -35,7 +35,7 @@ class Notifier():
         '''init notification system'''
         
         self.events = []
-        self.delta_between_xml_reload = DEFAULT_DELTA_BETWEEN_XML_RELOAD
+        self.delta_between_xml_reload = datetime.timedelta(minutes=DEFAULT_DELTA_BETWEEN_XML_RELOAD)
         try:
             self.update_from_config_file(config_file)
         except IOError, error:
@@ -48,17 +48,21 @@ class Notifier():
             logging.debug(_('Init notification system'))
             sys.exit(1)
         # try to load events from XML files, in right order
-        for xml_file in self.xml_files:
-            logging.info("Load %s XML input file"  % xml_file)
-            try:
-                self.events = handlexml.loadXML(xml_file)
-            except IOError, error:
-                logging.warning(_('XMl file seems being no more accessible: %s') % error)
-            else:
-                if not self.events:
-                    logging.warning(_("Can't perform initial loading of empty %s file: no event found") % xml_file)
+        try:
+            for xml_file in self.xml_files:
+                logging.info("Load %s XML input file"  % xml_file)
+                try:
+                    self.events = handlexml.loadXML(xml_file)
+                except IOError, error:
+                    logging.warning(_('XMl file seems being no more accessible: %s') % error)
                 else:
-                    break
+                    if not self.events:
+                        logging.warning(_("Can't perform initial loading of empty %s file: no event found") % xml_file)
+                    else:
+                        break
+        except AttributeError, e:
+            logging.error(_('No XML_FILES tag found in the configuration file %s.' % config_file))
+            sys.exit(1)        
         if not self.events:
             logging.error(_('No good XML file found'))
             sys.exit(1)
