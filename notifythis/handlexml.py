@@ -67,8 +67,7 @@ class IconDict(dict):
                 logging.debug(_('Caching "%s" to "%s"') % (key, dest_name))
                 with open(dest_name,'wb') as dest_file:
                     dest_file.write(local_image.read())
-            finally:
-                self.data[key] = dest_name
+                destvalue = dest_name
         else:
             if not os.path.exists(key):
                 logging.warning(_('%s icon file does not exist.') % key)
