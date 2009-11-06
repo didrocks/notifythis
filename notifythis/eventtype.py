@@ -15,6 +15,10 @@
 #with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
+import logging
+import gettext
+from gettext import gettext as _
+
 class EventType:
     '''EventType load name, priority and icon'''
     
@@ -23,4 +27,5 @@ class EventType:
         self.name = name
         self.priority = priority
         self.icon = icon
-        
+        logging.debug(_('Creating new event type: %s, %s, %s') % (name, priority, icon))
+      

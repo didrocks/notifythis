@@ -91,7 +91,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='notifythis',
-    version='0.1',
+    version='0.2',
     license='GPL-3',
     author='Didier Roche',
     author_email='didrocks@gmail.com',

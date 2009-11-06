@@ -108,7 +108,6 @@ def loadXML(xml_url):
             icon = xml_elem.find(xml_namespace + 'icon').text
             icons[icon] = icon # cache icon and return new one if needed
             icon = icons[icon]
-        logging.debug(_('Creating new event type: %s, %s, %s') % (name, priority, icon))
         types[name] = eventtype.EventType(name, priority, icon)
         
     logging.debug(_('load events'))
@@ -129,7 +128,6 @@ def loadXML(xml_url):
             icon = xml_elem.find(xml_namespace + 'icon').text
             icons[icon] = icon # cache icon and return new one if needed
             icon = icons[icon]
-        logging.debug(_('Creating new event: %s, %s, %s, %s, %s, %s') % (title, content, timeevent, types[type_name], priority, icon))
         events.append(event.Event(title, content, timeevent, types[type_name], priority, icon))
 
     return events

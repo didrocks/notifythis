@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-07 19:12+0200\n"
+"POT-Creation-Date: 2009-10-08 19:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,52 +158,52 @@ msgstr ""
 msgid "Creating new event: %s, %s, %s, %s, %s, %s"
 msgstr ""
 
-#: ../notifythis/checknotif.py:41
+#: ../notifythis/checknotif.py:42
 #, python-format
 msgid "Can't load configuration file: %s"
 msgstr ""
 
-#: ../notifythis/checknotif.py:45 ../notifythis/checknotif.py:47
+#: ../notifythis/checknotif.py:46 ../notifythis/checknotif.py:48
 msgid "Init notification system"
 msgstr ""
 
-#: ../notifythis/checknotif.py:55 ../notifythis/checknotif.py:133
+#: ../notifythis/checknotif.py:56 ../notifythis/checknotif.py:135
 #, python-format
 msgid "XMl file seems being no more accessible: %s"
 msgstr ""
 
-#: ../notifythis/checknotif.py:58 ../notifythis/checknotif.py:136
+#: ../notifythis/checknotif.py:59 ../notifythis/checknotif.py:138
 #, python-format
 msgid "Can't perform initial loading of empty %s file: no event found"
 msgstr ""
 
-#: ../notifythis/checknotif.py:62
+#: ../notifythis/checknotif.py:63
 msgid "No good XML file found"
 msgstr ""
 
-#: ../notifythis/checknotif.py:73
+#: ../notifythis/checknotif.py:74
 #, python-format
 msgid "Loading configuration from %s"
 msgstr ""
 
-#: ../notifythis/checknotif.py:102
+#: ../notifythis/checknotif.py:103
 #, python-format
 msgid "Event %s found, initially scheduled at: %s"
 msgstr ""
 
-#: ../notifythis/checknotif.py:114
+#: ../notifythis/checknotif.py:115
 msgid "Failed to send notification"
 msgstr ""
 
-#: ../notifythis/checknotif.py:120
+#: ../notifythis/checknotif.py:121
 msgid "CheckNotify daemon ping"
 msgstr ""
 
-#: ../notifythis/checknotif.py:129
+#: ../notifythis/checknotif.py:131
 #, python-format
 msgid "Reloading %s XML input file"
 msgstr ""
 
-#: ../notifythis/checknotif.py:142
+#: ../notifythis/checknotif.py:144
 msgid "No good XML file found. Keep old one."
 msgstr ""

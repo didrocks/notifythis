@@ -15,6 +15,10 @@
 #with this program.  If not, see <http://www.gnu.org/licenses/>.
 ### END LICENSE
 
+import logging
+import gettext
+from gettext import gettext as _
+
 from notifythis import eventtype
 
 class Event:
@@ -38,5 +42,5 @@ class Event:
         else:
             self.icon = icon
         if not priority: self.priority = type.priority 
-
+        logging.debug(_('Creating new event: %s, %s, %s, %s, %s, %s') % (title, content, time, type, self.priority, self.icon))
         
