@@ -1,3 +1,9 @@
+NotifyThis 0.2
+----------------
+
+  - Exit gracefully if -c point to a wrong configuration parsed file
+  - Fix not using cached icon from http://
+
 NotifyThis 0.1
 ----------------
 
