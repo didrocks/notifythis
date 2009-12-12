@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notifythis xmlns='http://launchpad.net/notifythis' xml:lang='fr'>
+    <notiftypes>
+        <type>
+            <name>cours</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/package_edutainment.png</icon>
+        </type>
+        <type>
+            <name>conference</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/x-office-presentation.png</icon>
+        </type>
+        <type>
+            <name>demonstration</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/system-users.png</icon>
+        </type>
+        <type>
+            <name>conf-eclair</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/x-office-presentation.png</icon>
+        </type>
+        <type>
+            <name>grande_pleniere</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/x-office-presentation.png</icon>
+        </type>
+        <type>
+            <name>pleniere_hadopi</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/x-office-presentation.png</icon>
+        </type>
+        <type>
+            <name>atelier</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/emblem-system.png</icon>
+        </type>
+        <type>
+            <name>atelier_bugjam</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/bugjam_32.png</icon>
+        </type>
+        <type>
+            <name>tombola</name>
+            <priority>low</priority>
+            <icon>http://www.quesh.fr/ftpublic/icones_tango/applications-games.png</icon>
+        </type>
+    </notiftypes>
+    <notifevents>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Présentation d'Ubuntu" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 10:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Présentation d'Ubuntu" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 10:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Présentation de l'association Ubuntu-fr" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 11:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Présentation de l'association Ubuntu-fr" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 11:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Ubuntu et l'expérience utilisateur" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 12:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Ubuntu et l'expérience utilisateur" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 12:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "La neutralité de l'Internet" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 13:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "La neutralité de l'Internet" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 13:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Le Logiciel Libre, un bien commun à protéger et à développer" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 14:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Le Logiciel Libre, un bien commun à protéger et à développer" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-28 14:55</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Contribuer à Ubuntu et aux logiciels libres" va commencer dans 10 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 15:50</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Contribuer à Ubuntu et aux logiciels libres" va commencer dans 5 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 15:55</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Qu'est-ce qu'une distribution GNU/Linux ?" va commencer dans 10 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 16:05</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Qu'est-ce qu'une distribution GNU/Linux ?" va commencer dans 5 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 16:10</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Debian" va commencer dans 10 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 16:20</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Debian" va commencer dans 5 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 16:25</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Fedora" va commencer dans 10 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 16:35</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Fedora" va commencer dans 5 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 16:40</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Mandriva" va commencer dans 10 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 16:50</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Mandriva" va commencer dans 5 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 16:55</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Ubuntu Studio" va commencer dans 10 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 17:05</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Ubuntu Studio" va commencer dans 5 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 17:10</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Kubuntu" va commencer dans 10 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 17:20</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Kubuntu" va commencer dans 5 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 17:25</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Ubuntu Netbook Remix" va commencer dans 10 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 17:35</time>
+        </event>
+        <event>
+            <title>Conférences éclairs</title>
+            <content>La conférence "Présentation de Ubuntu Netbook Remix" va commencer dans 5 minutes.</content>
+            <type>conf-eclair</type>
+            <time>2009-11-28 17:40</time>
+        </event>
+        <event>
+            <title>Table ronde</title>
+            <content>Le débat  « Quel Internet pour demain après Hadopi ? » commence dans 30 minutes et a lieu à l'amphithéâtre LOUIS-ARMAND.</content>
+            <type>pleniere_hadopi</type>
+            <time>2009-11-28 15:45</time>
+        </event>
+        <event>
+            <title>Table ronde</title>
+            <content>Le débat  « Quel Internet pour demain après Hadopi ? » commence dans 20 minutes et a lieu à l'amphithéâtre LOUIS-ARMAND.</content>
+            <type>pleniere_hadopi</type>
+            <time>2009-11-28 15:55</time>
+        </event>
+        <event>
+            <title>Table ronde</title>
+            <content>Le débat  « Quel Internet pour demain après Hadopi ? » commence dans 10 minutes et a lieu à l'amphithéâtre LOUIS-ARMAND.</content>
+            <type>pleniere_hadopi</type>
+            <time>2009-11-28 16:05</time>
+        </event>
+        <event>
+            <title>Plénière</title>
+            <content>La plénière, en présence de Marc SHUTTLEWORTH débute dans 45 minutes, rendez-vous à l'amphithéâtre LOUIS-ARMAND.</content>
+            <type>grande_pleniere</type>
+            <time>2009-11-28 17:45</time>
+        </event>
+        <event>
+            <title>Plénière</title>
+            <content>La plénière, en présence de Marc SHUTTLEWORTH débute dans 30 minutes, rendez-vous à l'amphithéâtre LOUIS-ARMAND.</content>
+            <type>grande_pleniere</type>
+            <time>2009-11-28 18:00</time>
+        </event>
+        <event>
+            <title>Plénière</title>
+            <content>La plénière, en présence de Marc SHUTTLEWORTH débute dans 20 minutes, rendez-vous à l'amphithéâtre LOUIS-ARMAND.</content>
+            <type>grande_pleniere</type>
+            <time>2009-11-28 18:10</time>
+        </event>
+        <event>
+            <title>Plénière</title>
+            <content>La plénière, en présence de Marc SHUTTLEWORTH débute dans 10 minutes, rendez-vous à l'amphithéâtre LOUIS-ARMAND.</content>
+            <type>grande_pleniere</type>
+            <time>2009-11-28 18:20</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Ubuntu et les nouveautés de la 9.10" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 10:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Ubuntu et les nouveautés de la 9.10" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 10:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Jouer sur Ubuntu" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 11:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Jouer sur Ubuntu" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 11:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Actualité du logiciel libre" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 12:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Actualité du logiciel libre" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 12:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Les femmes dans le projet Mozilla" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 13:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Les femmes dans le projet Mozilla" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 13:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Le logiciel libre et l'éducation" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 14:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Le logiciel libre et l'éducation" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 14:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Le multimédia et les outils libre" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 15:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Le multimédia et les outils libre" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 15:55</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Les formats ouverts" commence dans 10 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 16:50</time>
+        </event>
+        <event>
+            <title>Conférences</title>
+            <content>La conférence "Les formats ouverts" commence dans 5 minutes.</content>
+            <type>conference</type>
+            <time>2009-11-29 16:55</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Gestion des photos avec l'outil F-Spot" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 10:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Gestion des photos avec l'outil F-Spot" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 10:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux sonores assistés par ordinateur avec Audacity" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 11:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux sonores assistés par ordinateur avec Audacity" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 11:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 11:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 11:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "La virtualisation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 11:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "La virtualisation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 11:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 11:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 11:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 12:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 12:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 12:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 12:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Gestion des photos avec l'outil F-Spot" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 12:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Gestion des photos avec l'outil F-Spot" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 12:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 13:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 13:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "La virtualisation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 13:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "La virtualisation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 13:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 13:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 13:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 13:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 13:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 14:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 14:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "The Gimp et la retouche photo" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 14:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "The Gimp et la retouche photo" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 14:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 14:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 14:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "La virtualisation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 15:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "La virtualisation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 15:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 15:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 15:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 15:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 15:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 15:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 15:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "The Gimp et la retouche photo" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 16:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "The Gimp et la retouche photo" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 16:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 16:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 16:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "La virtualisation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 16:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "La virtualisation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 16:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 17:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 17:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 17:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 17:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 17:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-28 17:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Gestion des photos avec l'outil F-Spot" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 10:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Gestion des photos avec l'outil F-Spot" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 10:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux sonores assistés par ordinateur avec Hydrogen" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 11:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux sonores assistés par ordinateur avec Hydrogen" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 11:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 11:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 11:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Encodage vidéo avec EKD " commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 11:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Encodage vidéo avec EKD " commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 11:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 12:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 12:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 12:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 12:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Gestion des photos avec l'outil F-Spot" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 12:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Gestion des photos avec l'outil F-Spot" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 12:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 13:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 13:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo pour débutants avec Kino" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 13:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo pour débutants avec Kino" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 13:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 13:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 13:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 14:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 14:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "The Gimp et la retouche photo" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 14:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "The Gimp et la retouche photo" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 14:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 14:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 14:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage audio" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 15:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage audio" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 15:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 15:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 15:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 15:50</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 15:58</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "The Gimp et la retouche photo" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 16:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "The Gimp et la retouche photo" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 16:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 16:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Personnalisation du bureau avec Cairo-Dock" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 16:43</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo avec Kdenlive et Cinelerra (niveau intermédiaire et avancé)" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 17:05</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Montage vidéo avec Kdenlive et Cinelerra (niveau intermédiaire et avancé)" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 17:13</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 17:20</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Travaux graphiques sous Inkscape" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 17:28</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 10 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 17:35</time>
+        </event>
+        <event>
+            <title>Démonstrations</title>
+            <content>La démo "Intertice : éducation" commence dans 2 minutes.</content>
+            <type>demonstration</type>
+            <time>2009-11-29 17:43</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Initiation à Ubuntu" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 11:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Initiation à Ubuntu" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 11:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Premiers pas en ligne de commande" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 12:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Premiers pas en ligne de commande" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 12:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Personnaliser Ubuntu" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 13:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Personnaliser Ubuntu" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 13:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Initiation à Ubuntu" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 14:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Initiation à Ubuntu" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 14:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Ligne de commande, aller plus loin" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 15:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Ligne de commande, aller plus loin" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-28 15:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Initiation à Ubuntu" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 11:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Initiation à Ubuntu" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 11:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Premiers pas en ligne de commande" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 12:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Premiers pas en ligne de commande" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 12:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Personnaliser Ubuntu" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 13:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Personnaliser Ubuntu" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 13:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Initiation à Ubuntu" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 14:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Initiation à Ubuntu" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 14:50</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Ligne de commande, aller plus loin" débute dans 20 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 15:40</time>
+        </event>
+        <event>
+            <title>Cours</title>
+            <content>Le cours "Ligne de commande, aller plus loin" débute dans 10 minutes.</content>
+            <type>cours</type>
+            <time>2009-11-29 15:50</time>
+        </event>
+        <event>
+            <title>Atelier</title>
+            <content>La BugJam commence dans 30 minutes dans la salle EF5.</content>
+            <type>atelier_bugjam</type>
+            <time>2009-11-28 12:30</time>
+        </event>
+        <event>
+            <title>Atelier</title>
+            <content>La BugJam commence dans 15 minutes dans la salle EF5.</content>
+            <type>atelier_bugjam</type>
+            <time>2009-11-28 12:45</time>
+        </event>
+        <event>
+            <title>Atelier</title>
+            <content>L'atelier "Drupal" commence dans 30 minutes dans la salle EF5.</content>
+            <type>atelier</type>
+            <time>2009-11-29 12:30</time>
+        </event>
+        <event>
+            <title>Atelier</title>
+            <content>L'atelier "Drupal" commence dans 15 minutes dans la salle EF5.</content>
+            <type>atelier</type>
+            <time>2009-11-29 12:45</time>
+        </event>
+        <event>
+            <title>Atelier</title>
+            <content>L'atelier "Formation conférencier logiciel libre" commence dans 30 minutes dans la salle EF5.</content>
+            <type>atelier</type>
+            <time>2009-11-29 14:30</time>
+        </event>
+        <event>
+            <title>Atelier</title>
+            <content>L'atelier "Formation conférencier logiciel libre" commence dans 15 minutes dans la salle EF5.</content>
+            <type>atelier</type>
+            <time>2009-11-29 14:45</time>
+        </event>
+        <event>
+            <title>Tombola</title>
+            <content>Les résultats de la tombolat, c'est dans 30 minutes dans la classe numérique.</content>
+            <type>tombola</type>
+            <time>2009-11-29 17:30</time>
+        </event>
+        <event>
+            <title>Tombola</title>
+            <content>Les résultats de la tombolat, c'est dans 15 minutes dans la classe numérique.</content>
+            <type>tombola</type>
+            <time>2009-11-29 17:45</time>
+        </event>
+    </notifevents>
+</notifythis>

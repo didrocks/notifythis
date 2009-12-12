@@ -91,7 +91,7 @@ class Notifier():
                         xml_files = [xml_file.strip() for xml_file in fields[1].split(';')]
                         # if relative path, it's relative to config_file
                         for xml_file in xml_files:
-                            if not xml_file.startswith('/'):
+                            if not xml_file.startswith('/') and not xml_file.startswith('http://'):
                                 xml_file = os.path.abspath(os.path.dirname(config_path_file) + '/' + xml_file)
                             self.xml_files.append(xml_file)
 

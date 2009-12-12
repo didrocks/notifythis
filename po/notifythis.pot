@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-08 19:24+0200\n"
+"POT-Creation-Date: 2009-11-27 21:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,6 +36,11 @@ msgstr ""
 
 #: ../bin/notifythis.py:66
 msgid "set error_level output to warning, info, and then debug"
+msgstr ""
+
+#: ../notifythis/eventtype.py:30
+#, python-format
+msgid "Creating new event type: %s, %s, %s"
 msgstr ""
 
 #: ../notifythis/desktopdaemon.py:42
@@ -124,36 +129,31 @@ msgstr ""
 msgid "Caching \"%s\" to \"%s\""
 msgstr ""
 
-#: ../notifythis/handlexml.py:74
+#: ../notifythis/handlexml.py:73
 #, python-format
 msgid "%s icon file does not exist."
 msgstr ""
 
-#: ../notifythis/handlexml.py:77
+#: ../notifythis/handlexml.py:76
 msgid ""
 "Notification will be shown without any image or with type event if it's a "
 "redefinition."
 msgstr ""
 
-#: ../notifythis/handlexml.py:100
+#: ../notifythis/handlexml.py:99
 msgid "load event types"
 msgstr ""
 
-#: ../notifythis/handlexml.py:111
-#, python-format
-msgid "Creating new event type: %s, %s, %s"
-msgstr ""
-
-#: ../notifythis/handlexml.py:114
+#: ../notifythis/handlexml.py:112
 msgid "load events"
 msgstr ""
 
-#: ../notifythis/handlexml.py:122
+#: ../notifythis/handlexml.py:120
 #, python-format
 msgid "Type '%s' in '%s' event does not exists"
 msgstr ""
 
-#: ../notifythis/handlexml.py:132
+#: ../notifythis/event.py:45
 #, python-format
 msgid "Creating new event: %s, %s, %s, %s, %s, %s"
 msgstr ""
@@ -167,43 +167,48 @@ msgstr ""
 msgid "Init notification system"
 msgstr ""
 
-#: ../notifythis/checknotif.py:56 ../notifythis/checknotif.py:135
+#: ../notifythis/checknotif.py:57 ../notifythis/checknotif.py:139
 #, python-format
 msgid "XMl file seems being no more accessible: %s"
 msgstr ""
 
-#: ../notifythis/checknotif.py:59 ../notifythis/checknotif.py:138
+#: ../notifythis/checknotif.py:60 ../notifythis/checknotif.py:142
 #, python-format
 msgid "Can't perform initial loading of empty %s file: no event found"
 msgstr ""
 
-#: ../notifythis/checknotif.py:63
+#: ../notifythis/checknotif.py:64
+#, python-format
+msgid "No XML_FILES tag found in the configuration file %s."
+msgstr ""
+
+#: ../notifythis/checknotif.py:67
 msgid "No good XML file found"
 msgstr ""
 
-#: ../notifythis/checknotif.py:74
+#: ../notifythis/checknotif.py:78
 #, python-format
 msgid "Loading configuration from %s"
 msgstr ""
 
-#: ../notifythis/checknotif.py:103
+#: ../notifythis/checknotif.py:107
 #, python-format
 msgid "Event %s found, initially scheduled at: %s"
 msgstr ""
 
-#: ../notifythis/checknotif.py:115
+#: ../notifythis/checknotif.py:119
 msgid "Failed to send notification"
 msgstr ""
 
-#: ../notifythis/checknotif.py:121
+#: ../notifythis/checknotif.py:125
 msgid "CheckNotify daemon ping"
 msgstr ""
 
-#: ../notifythis/checknotif.py:131
+#: ../notifythis/checknotif.py:135
 #, python-format
 msgid "Reloading %s XML input file"
 msgstr ""
 
-#: ../notifythis/checknotif.py:144
+#: ../notifythis/checknotif.py:148
 msgid "No good XML file found. Keep old one."
 msgstr ""

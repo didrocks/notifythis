@@ -4,4 +4,4 @@ DELTA_BETWEEN_XML_RELOAD=30
 # xml files (separated by ';') by order of preferences.
 # It can an absolute or a relative path to this file.
 # It can be a network path (http://) too
-XML_FILES=notifythis-data.xml
+XML_FILES=http://termite.moostik.net/~olive/umc-data.xml;up-data.xml
